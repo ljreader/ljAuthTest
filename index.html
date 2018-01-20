@@ -1,19 +1,30 @@
 <!doctype html>
 <html lang="en-us">
 	<meta charset="UTF-8">
-	<title>Facebook Auth</title>
+    <title>Facebook Auth</title>
+    <script type="text/javascript" src="script/facebook.js"></script>
+
 </head>
 <body>
-	<header>
-		<p>header</p>
-	</header>
+    	<header>
+                <p>header</p>
+        </header>
+             <nav class="navbar navbar-default" id="navbar">
+                <div class="container-fluid wrap">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                    </a>
+                  </div>
+                  <div class="nav navbar-nav navbar-right">
+                    <text id="text">Login</text>
+                        <!--Adds custom LOGIN button-->
+                    <a href="#" onclick="fb_login();"><img class="fb" src="images/fbround.png" height=50px width=250px border="0"></a>
+                  </div>
+                </div>
+              </nav>
 	<nav>
 		<p>nav</p>
 	</nav>
-	<section>
-		<heading>
-			<p>section</p>
-		</heading>	
 		<article>
 			<heading>article</heading>
 			<h1>h1, h2, h3</h1>
@@ -24,7 +35,7 @@
 		<heading>
 			<p>aside</p>
 		</heading>
-	</aside>
+	</aside>        <div id="status">
 	<div class="clear"></div>
 	<footer>
 		<p>footer</p>
