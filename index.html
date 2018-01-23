@@ -2,6 +2,7 @@
 <!-- https://ljreader.github.io/ljAuthTest/ -->
 <!doctype html>
 <html lang="en-us">
+<head>	
 	<meta charset="UTF-8">
 		<title>Facebook Auth</title>
 		<!-- <script
@@ -9,12 +10,16 @@
 		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 		crossorigin="anonymous"></script> -->
     <!-- <script type="text/javascript" src="script/facebook.js"></script> -->
-		<meta name="google-signin-scope" content="lawrencereader76@gmail.com">
-    <meta name="980913783086-25h54nn7biq206lp9in1ju83tnhb45ra.apps.googleusercontent.com" content="GK9ZaBoY-tAayM9iQlG2APpz.apps.googleusercontent.com">
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-scope" content="lawrencereader76@gmail.com">
+  <meta name="980913783086-25h54nn7biq206lp9in1ju83tnhb45ra.apps.googleusercontent.com" content="GK9ZaBoY-tAayM9iQlG2APpz.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 		
 </head>
+
 <body>
+
+
+<!-- Facebook -->
 		<script>
 				// This is called with the results from from FB.getLoginStatus().
 				function statusChangeCallback(response) {
@@ -73,22 +78,10 @@
 					  'Thanks for logging in, ' + response.name + '!';
 				  });
 				}
-			  </script>
+				</script>
+<!-- /Facebook/ -->
 
-    	<header>
-                 <h1>Facebook Authentication</h1>
-				</header>
-				<div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="small" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
-				<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-
-
-
-
-
-
-
-
-				<!-- GOOGLE -->
+<!-- GOOGLE -->
 				<script>
 					function onSignIn(googleUser) {
 						// Useful data for your client-side scripts:
@@ -104,8 +97,35 @@
 						var id_token = googleUser.getAuthResponse().id_token;
 						console.log("ID Token: " + id_token);
 					};
+				</script>
 
-                        <!--Adds custom LOGIN button-->
+    	<header>
+                 <h1>Facebook Authentication</h1>
+				</header>
+				<div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="small" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
+<!-- Google Sign-in Button				 -->
+				<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<!-- /Google Sign-in Button/				 -->
+
+
+<!-- Google Sign-Out Button				 -->
+				<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+<!-- /Google Sign-Out Button/				 -->
+
+
+
+
+
+
+
 </body>
 </html>
 
