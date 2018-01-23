@@ -92,19 +92,18 @@
 
 
 
-
 		
 
 
 
     	<header>
                  <h1>Facebook Authentication</h1>
-				</header>
-				<div class="fb-login-button" data-width=""></div>
-				<div class="fb-like" data-width=""></div>
-				<div class="fb-share-button"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">Share</a></div>
-				
-                        <!--Adds custom LOGIN button-->
+        </header>
+												<!--Adds custom LOGIN button-->
+												<div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="small" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div><div class="fb-like" data-width=""></div>
+<div class="fb-share-button"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">Share</a></div>
+
+
 </body>
 </html>
 
