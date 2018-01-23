@@ -1,3 +1,5 @@
+<!-- https://github.com/ljreader/ljAuthTest -->
+<!-- https://ljreader.github.io/ljAuthTest/ -->
 <!doctype html>
 <html lang="en-us">
 	<meta charset="UTF-8">
@@ -67,13 +69,12 @@
 			  
 				// Load the SDK asynchronously
 				(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "https://connect.facebook.net/en_US/sdk.js";
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
-			  
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=209702906273582&autoLogAppEvents=1';
+						fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));			  
 				// Here we run a very simple test of the Graph API after login is
 				// successful.  See statusChangeCallback() for when this call is made.
 				function testAPI() {
@@ -109,6 +110,8 @@
 		<div id="status">
 			</div>
 		<div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="small" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
+		<div class="fb-like" data-width=""></div>
+
     	<header>
                  <h1>Facebook Authentication</h1>
         </header>
