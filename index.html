@@ -9,9 +9,10 @@
 		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 		crossorigin="anonymous"></script> -->
     <!-- <script type="text/javascript" src="script/facebook.js"></script> -->
-		<meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-scope" content="lawrencereader76@gmail.com">
+    <meta name="980913783086-25h54nn7biq206lp9in1ju83tnhb45ra.apps.googleusercontent.com" content="GK9ZaBoY-tAayM9iQlG2APpz.apps.googleusercontent.com">
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		
 </head>
 <body>
 		<script>
@@ -19,10 +20,6 @@
 				function statusChangeCallback(response) {
 				  console.log('statusChangeCallback');
 				  console.log(response);
-				  // The response object is returned with a status field that lets the
-				  // app know the current login status of the person.
-				  // Full docs on the response object can be found in the documentation
-				  // for FB.getLoginStatus().
 				  if (response.status === 'connected') {
 					// Logged into your app and Facebook.
 					testAPI();
@@ -51,18 +48,6 @@
 					version    : 'v2.11' // use graph api version 2.8
 				  });
 			  
-				  // Now that we've initialized the JavaScript SDK, we call 
-				  // FB.getLoginStatus().  This function gets the state of the
-				  // person visiting this page and can return one of three states to
-				  // the callback you provide.  They can be:
-				  //
-				  // 1. Logged into your app ('connected')
-				  // 2. Logged into Facebook, but not your app ('not_authorized')
-				  // 3. Not logged into Facebook and can't tell if they are logged into
-				  //    your app or not.
-				  //
-				  // These three cases are handled in the callback function.
-			  
 				  FB.getLoginStatus(function(response) {
 					statusChangeCallback(response);
 				  });
@@ -89,31 +74,21 @@
 				  });
 				}
 			  </script>
-			  
-			  <!--
-				Below we include the Login Button social plugin. This button uses
-				the JavaScript SDK to present a graphical Login button that triggers
-				the FB.login() function when clicked.
-			  -->
-			  
-			  <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-			  </fb:login-button> -->
-			  
-			  
-		<!-- <script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=209702906273582';
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-		 -->
 
     	<header>
                  <h1>Facebook Authentication</h1>
 				</header>
 				<div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="small" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
 				<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+
+
+
+
+
+
+
+				<!-- GOOGLE -->
 				<script>
 					function onSignIn(googleUser) {
 						// Useful data for your client-side scripts:
@@ -134,4 +109,8 @@
 </body>
 </html>
 
-
+// Google
+// Client ID
+// 980913783086-25h54nn7biq206lp9in1ju83tnhb45ra.apps.googleusercontent.com
+// Client Secret
+// GK9ZaBoY-tAayM9iQlG2APpz
