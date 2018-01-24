@@ -4,133 +4,23 @@
 <html lang="en-us">
 <head>	
 	<meta charset="UTF-8">
+	<meta property="og:url" content="https://ljreader.github.io/purpletree/"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Monster Mystery at the Lake" />
+	<meta property="og:description" content="A choose your own adventure style page for kids" />
+	<meta property="og:image" content="http://www.clker.com/cliparts/r/n/S/v/R/6/purple-maple-tree-md.png" />
+	<meta property="fb:app_id" content="1994680544133095" />
+	<meta property="og:locale" content="en_US" />
+  
 		<title>Facebook Auth</title>
-		<!-- <script
-		src="https://code.jquery.com/jquery-3.2.1.js"
-		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-		crossorigin="anonymous"></script> -->
-    <!-- <script type="text/javascript" src="script/facebook.js"></script> -->
-	<meta name="google-signin-scope" content="lawrencereader76@gmail.com">
-  <meta name="980913783086-25h54nn7biq206lp9in1ju83tnhb45ra.apps.googleusercontent.com" content="GK9ZaBoY-tAayM9iQlG2APpz.apps.googleusercontent.com">
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
-		
 </head>
 
 <body>
-
-
-<!-- Facebook -->
-		<script>
-				// This is called with the results from from FB.getLoginStatus().
-				// function statusChangeCallback(response) {
-				//   console.log('statusChangeCallback');
-				//   console.log(response);
-				//   if (response.status === 'connected') {
-				// 	// Logged into your app and Facebook.
-				// 	testAPI();
-				//   } else {
-				// 	// The person is not logged into your app or we are unable to tell.
-				// 	document.getElementById('status').innerHTML = 'Please log ' +
-				// 	  'into this app.';
-				//   }
-				// }
-			  
-				// // This function is called when someone finishes with the Login
-				// // Button.  See the onlogin handler attached to it in the sample
-				// // code below.
-				// function checkLoginState() {
-				//   FB.getLoginStatus(function(response) {
-				// 	statusChangeCallback(response);
-				//   });
-				// }
-			  
-				// window.fbAsyncInit = function() {
-				//   FB.init({
-				// 	appId      : '209702906273582',
-				// 	cookie     : true,  // enable cookies to allow the server to access 
-				// 						// the session
-				// 	xfbml      : true,  // parse social plugins on this page
-				// 	version    : 'v2.11' // use graph api version 2.8
-				//   });
-			  
-				//   FB.getLoginStatus(function(response) {
-				// 	statusChangeCallback(response);
-				//   });
-			  
-				// };
-			  
-				// // Load the SDK asynchronously
-				// (function(d, s, id) {
-				//   var js, fjs = d.getElementsByTagName(s)[0];
-				//   if (d.getElementById(id)) return;
-				//   js = d.createElement(s); js.id = id;
-				//   js.src = "https://connect.facebook.net/en_US/sdk.js";
-				//   fjs.parentNode.insertBefore(js, fjs);
-				// }(document, 'script', 'facebook-jssdk'));
-			  
-				// // Here we run a very simple test of the Graph API after login is
-				// // successful.  See statusChangeCallback() for when this call is made.
-				// function testAPI() {
-				//   console.log('Welcome!  Fetching your information.... ');
-				//   FB.api('/me', function(response) {
-				// 	console.log('Successful login for: ' + response.name);
-				// 	document.getElementById('status').innerHTML =
-				// 	  'Thanks for logging in, ' + response.name + '!';
-				//   });
-				// }
-				// </script>
-<!-- /Facebook/ -->
-
-<!-- GOOGLE -->
-				<script>
-					function onSignIn(googleUser) {
-						// Useful data for your client-side scripts:
-						var profile = googleUser.getBasicProfile();
-						console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-						console.log('Full Name: ' + profile.getName());
-						console.log('Given Name: ' + profile.getGivenName());
-						console.log('Family Name: ' + profile.getFamilyName());
-						console.log("Image URL: " + profile.getImageUrl());
-						console.log("Email: " + profile.getEmail());
-		
-						// The ID token you need to pass to your backend:
-						var id_token = googleUser.getAuthResponse().id_token;
-						console.log("ID Token: " + id_token);
-					};
-				</script>
-
-    	<header>
-                 <h1>Google auth</h1>
-				</header>
-				<!-- <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="small" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div> -->
-<!-- Google Sign-in Button				 -->
-				<div class="g-signin2" data-onsuccess="onSignIn"></div>
-<!-- /Google Sign-in Button/				 -->
-
-
-<!-- Google Sign-Out Button				 -->
-				<!-- <a href="#" onclick="signOut();">Sign out</a>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script> -->
-<!-- /Google Sign-Out Button/				 -->
-
-
-
-
-
-
+	<div class="nav navbar-nav navbar-right">
+        <text id="text">Login</text>
+            <!--Adds custom LOGIN button-->
+        <a href="#" onclick="fb_login();"><img class="fb" src="images/fbround.png" height=50px width=50px border="0"></a>
+      </div>
 
 </body>
 </html>
-
-// Google
-// Client ID
-// 980913783086-25h54nn7biq206lp9in1ju83tnhb45ra.apps.googleusercontent.com
-// Client Secret
-// GK9ZaBoY-tAayM9iQlG2APpz
