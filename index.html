@@ -1,5 +1,6 @@
 <!-- https://github.com/ljreader/ljAuthTest -->
 <!-- https://ljreader.github.io/ljAuthTest/ -->
+<!-- https://ljreader.github.io/ljAuthTest/ -->
 <!doctype html>
 <html lang="en-us">
 <head>	
@@ -16,11 +17,16 @@
 </head>
 
 <body>
-	<div class="nav navbar-nav navbar-right">
-        <text id="text">Login</text>
-            <!--Adds custom LOGIN button-->
-        <a href="#" onclick="fb_login();"><img class="fb" src="images/fbround.png" height=50px width=50px border="0"></a>
-      </div>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=209702906273582&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
 </body>
 </html>
